@@ -23,6 +23,8 @@ const columns = [
 
 const RiskChanceExperts = ({setIncomingEr, coefs}) => {
 
+    
+    
     const [risks, setRisks] = useState({
         techRisks: 0,
         costRisks: 0,

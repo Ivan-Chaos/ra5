@@ -3,6 +3,8 @@ import PotentialRisks from "./PotentialRisks";
 import Risks from "./Risks";
 
 const ComboRisk = () => {
+    
+    
     return (<div style={{height: '100vh'}}>
             <Row>
                 <Col>

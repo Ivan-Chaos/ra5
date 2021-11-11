@@ -19,20 +19,25 @@ const ComboRiskChance = () => {
 
 
     return (<div>
-         <hr />
-        <Stack direction="row" spacing={2} style={{margin: '1em'}}>
-            <Button size="large" variant={currentlyShowing ==0 ? "outlined": ""} onClick={()=>setCurrentlyShowing(0)}>
+        <hr />
+        <Stack direction="row" spacing={2} style={{ margin: '1em' }}>
+            <Button size="large" variant={currentlyShowing == 0 ? "outlined" : ""} onClick={() => setCurrentlyShowing(0)}>
                 Результуюче оцінювання ризиків
             </Button>
 
-            <Button variant={currentlyShowing ==1 ? "outlined": ""} size="large" onClick={()=>setCurrentlyShowing(1)}>
+            <Button variant={currentlyShowing == 1 ? "outlined" : ""} size="large" onClick={() => setCurrentlyShowing(1)}>
                 Результуюча величина ризиків
             </Button>
         </Stack>
         <hr />
-        {currentlyShowing==0 && <RiskChanceExperts setIncomingEr={setAvgs} coefs={coefs} coefs={coefs} />}
+        <div style={{ display: currentlyShowing == 0 ? '' : 'none' }} >
+            <RiskChanceExperts setIncomingEr={setAvgs} coefs={coefs} coefs={coefs}/>
+        </div>
 
-        {currentlyShowing==1 && <RiskChancePrio er={avgs} />}
+
+        <div style={{ display: currentlyShowing == 1 ? '' : 'none' }}>
+            <RiskChancePrio er={avgs} />
+        </div>
 
     </div>);
 }

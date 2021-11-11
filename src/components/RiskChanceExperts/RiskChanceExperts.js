@@ -23,6 +23,8 @@ const columns = [
 
 const RiskChanceExperts = ({setIncomingEr, coefs}) => {
 
+    const [userData, setUserData] = useState(new Array(47).fill(new Array(10).fill(0)));
+    
     const [risks, setRisks] = useState({
         techRisks: 0,
         costRisks: 0,
@@ -32,7 +34,7 @@ const RiskChanceExperts = ({setIncomingEr, coefs}) => {
 
     const [er, setEr] = useState(new Array(47).fill(0));
 
-    const [userData, setUserData] = useState(new Array(47).fill(new Array(10).fill(0)));
+    
     const [rows, setRows] = useState([
         { id: 1, code: 't1', riskName: 'затримки у постачанні обладнання, необхідного для підтримки процесу розроблення ПЗ', pers1: '0', pers2: 0, pers3: 0, pers4: 0, pers5: 0, pers6: 0, pers7: 0, pers8: 0, pers9: 0, pers10: 0, avg: 0 },
         { id: 2, code: 't2', riskName: 'затримки у постачанні інструментальних засобів, необхідних для підтримки процесу розроблення ПЗ', pers1: '0', pers2: 0, pers3: 0, pers4: 0, pers5: 0, pers6: 0, pers7: 0, pers8: 0, pers9: 0, pers10: 0, avg: 0 },
@@ -132,7 +134,7 @@ const RiskChanceExperts = ({setIncomingEr, coefs}) => {
         return row.id;
     }
 
-    return <div className={"fadein"}>
+    return <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h2 style={{width: "50%"}}>Визначення ймовірності настання ризикових подій</h2>
                 <StatsBlock TechRisks={risks.techRisks} CostRisks={risks.costRisks} PlanningRisks={risks.planningRisks} RealisationRisks={risks.realisationRisks} Title={"Ймовірність появи ризиків"}/>

@@ -12,6 +12,8 @@ const ComboRiskChance = () => {
 
     const [currentlyShowing, setCurrentlyShowing] = useState(0);
 
+    
+
     useEffect(() => {
         console.log("🚀 ~ file: ComboRiskChance.js ~ line 13 ~ ComboRiskChance ~ coefs", coefs)
 
@@ -30,9 +32,14 @@ const ComboRiskChance = () => {
             </Button>
         </Stack>
         <hr />
-        {currentlyShowing==0 && <RiskChanceExperts setIncomingEr={setAvgs} coefs={coefs} coefs={coefs} />}
+        <div style={{ display: currentlyShowing == 0 ? '' : 'none' }} >
+            <RiskChanceExperts setIncomingEr={setAvgs} coefs={coefs} coefs={coefs}/>
+        </div>
 
-        {currentlyShowing==1 && <RiskChancePrio er={avgs} />}
+
+        <div style={{ display: currentlyShowing == 1 ? '' : 'none' }}>
+            <RiskChancePrio er={avgs} />
+        </div>
 
     </div>);
 }

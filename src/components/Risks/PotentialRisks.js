@@ -109,7 +109,7 @@ const PotentialRisks = () => {
     return (
         <div style={{ height: '50vh', width: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h2 style={{width: "50%"}}>Визначення можливих джерел появи ризиків</h2>
+                <h2 style={{width: "50%"}}>Ідентифікація потенційних ризикових подій</h2>
                 <StatsBlock TechRisks={risks.techRisks} CostRisks={risks.costRisks} PlanningRisks={risks.planningRisks} RealisationRisks={risks.realisationRisks} Title={"Ймовірність ризик. подій"}/>
 
             </div>

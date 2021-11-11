@@ -17,7 +17,7 @@ const columns = [
     { key: 'pers8', name: '8', editor: TextEditor },
     { key: 'pers9', name: '9', editor: TextEditor },
     { key: 'pers10', name: '10', editor: TextEditor },
-    { key: 'avg', name: 'ERp'}
+    { key: 'avg', name: 'ERPER'}
 ];
 
 
@@ -134,7 +134,7 @@ const RiskChanceExperts = ({setIncomingEr, coefs}) => {
 
     return <div className={"fadein"}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h2 style={{width: "50%"}}>Визначення ймовірності настання ризикових подій</h2>
+                <h2 style={{width: "50%"}}>Результуюче оцінювання ризиків</h2>
                 <StatsBlock TechRisks={risks.techRisks} CostRisks={risks.costRisks} PlanningRisks={risks.planningRisks} RealisationRisks={risks.realisationRisks} Title={"Ймовірність появи ризиків"}/>
 
             </div>

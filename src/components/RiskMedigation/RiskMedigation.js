@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
 import DataGrid, { TextEditor, Row, RowRendererProps } from 'react-data-grid';
+import Button from '@material-ui/core/Button';
+import {exportToPdf} from './ExportUtils'
 
 const solutions = [
     "попереднє навчання членів проектного колективу",
@@ -104,8 +106,11 @@ const RiskMedigation = () => {
         return row.id;
     }
     
+    const gridElement=<DataGrid columns={columns} rows={rows} rowKeyGetter={rowKeyGetter} onRowsChange={setRows} style={{height: "75vh"}}/>;
+
     return (<div>
-        <DataGrid columns={columns} rows={rows} rowKeyGetter={rowKeyGetter} onRowsChange={setRows} />
+        <Button onClick={()=>exportToPdf(gridElement, 'riskMedigation.pdf')} variant="outlined" style={{margin: '1em'}}>Експортувати в PDF</Button>
+        {gridElement}
     </div>  );
 }
  

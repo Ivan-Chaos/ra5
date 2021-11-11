@@ -13,7 +13,7 @@ const columns = [
     {
         field: 'riskName',
         headerName: 'Можливі ризики',
-        width: 700,
+        width: 600,
         editable: false,
     },
     {
@@ -110,7 +110,7 @@ const PotentialRisks = () => {
         <div style={{ height: '50vh', width: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h2 style={{width: "50%"}}>Визначення можливих джерел появи ризиків</h2>
-                <StatsBlock TechRisks={risks.techRisks} CostRisks={risks.costRisks} PlanningRisks={risks.planningRisks} RealisationRisks={risks.realisationRisks} Title={"Ймовірність настання ризикових подій"}/>
+                <StatsBlock TechRisks={risks.techRisks} CostRisks={risks.costRisks} PlanningRisks={risks.planningRisks} RealisationRisks={risks.realisationRisks} Title={"Ймовірність ризик. подій"}/>
 
             </div>
 

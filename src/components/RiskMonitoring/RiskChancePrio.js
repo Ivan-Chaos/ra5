@@ -6,9 +6,9 @@ const columns = [
     { key: 'id', name: 'ID', width: 50 },
     { key: 'code', name: '', width: 50 },
     { key: 'riskName', name: 'Title', width: 700 },
-    { key: 'er', name: 'ER' },
-    { key: 'lrer', name: 'LRER', editor: TextEditor },
-    { key: 'vrer', name: 'VRER' },
+    { key: 'er', name: 'ERPRER' },
+    { key: 'lrer', name: 'ELRER', editor: TextEditor },
+    { key: 'vrer', name: 'EVRER' },
     { key: 'priority', name: 'Пріоритет' },
 ];
 
@@ -114,8 +114,8 @@ const RiskChancePrio = ({ er }) => {
 
     return (<div>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <h4>VRER min: {minVrer.toFixed(1)} </h4>
-            <h4>VRER max: {maxVRER.toFixed(1)} </h4>
+            <h4>EVRER min: {minVrer.toFixed(1)} </h4>
+            <h4>EVRER max: {maxVRER.toFixed(1)} </h4>
             <h5 style={{color: 'green'}}>Низький пріоритет реагування: [{(minVrer).toFixed(2)}; {(minVrer + (maxVRER - minVrer) / 3).toFixed(2)}) </h5>
             <h5 style={{color: '#d19900'}}>Середній пріоритет реагування: [{(minVrer + (maxVRER - minVrer) / 3).toFixed(2)}; {(minVrer + (maxVRER - minVrer) / 3 + (maxVRER - minVrer) / 3).toFixed(2)}) </h5>
             <h5 style={{color: 'red'}}>Високий пріоритет реагування: [{(minVrer + (maxVRER - minVrer) / 3 + (maxVRER - minVrer) / 3).toFixed(2)}; {(minVrer + (maxVRER - minVrer) / 3 + (maxVRER - minVrer) / 3 + (maxVRER - minVrer) / 3).toFixed(2)}) </h5>

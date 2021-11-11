@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { DataGrid } from '@material-ui/data-grid';
+import StatsBlock from './StatsBlock';
 
 
 const columns = [
@@ -106,11 +107,12 @@ const PotentialRisks = () => {
 
 
     return (
-        <div style={{ height: 400, width: '100%' }}>
-            <p>TechRisks: {risks.techRisks.toFixed(2)}</p>
-            <p>CosthRisks: {risks.costRisks.toFixed(2)}</p>
-            <p>PlanningRisks: {risks.planningRisks.toFixed(2)}</p>
-            <p>RealisationRisks: {risks.realisationRisks.toFixed(2)}</p>
+        <div style={{ height: '50vh', width: '100%' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h2 style={{width: "50%"}}>Визначення можливих джерел появи ризиків</h2>
+                <StatsBlock TechRisks={risks.techRisks} CostRisks={risks.costRisks} PlanningRisks={risks.planningRisks} RealisationRisks={risks.realisationRisks} Title={"Ймовірність настання ризикових подій"}/>
+
+            </div>
 
             <DataGrid
                 ref={gridRef}
